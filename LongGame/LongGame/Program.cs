@@ -22,14 +22,17 @@ namespace LongGame
 
             }
             string scoreString = score.ToString();
+            /*File.Create("/" + name + ".txt");*/
+            File.WriteAllText(name+".txt", scoreString);  // Create a file and write the content of writeText to it
 
-            File.WriteAllText(name+".txt", scoreString);
-            
+            string readText = File.ReadAllText("filename.txt");  // Read the contents of the file
+            Console.WriteLine(readText);
 
 
 
-                
-            }
+
+
+        }
 
         }
     }
